@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  db:
+    container_name: mean-db
+    image: mongo:5.0.16
+    volumes:
+      - ./mongo:/data/db
+    ports:
+      - 27017:27017
+    restart: always
+# Para levantar el contenedor:
+#   En la terminal integrada de VS: docker compose up -d
+#   el -d nos permite cerrar la terminal integrada y que siga corriendo el contenedor
+#
+# Aparecerá el contenedor en Docker Desktop
+#
+# Abrir Mongo Compass y conectarlo al localhost:27017
